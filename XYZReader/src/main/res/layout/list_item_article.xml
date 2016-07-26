@@ -10,7 +10,7 @@
     android:focusable="true"
     android:foreground="?selectableItemBackground">
 
-    <LinearLayout
+    <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -18,8 +18,8 @@
         <!--suppress AndroidLintContentDescription -->
         <com.example.xyzreader.ui.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
             android:background="@color/photo_placeholder" />
 
         <TextView
@@ -33,7 +33,8 @@
             android:paddingBottom="4dp"
             android:textColor="@color/ltgray"
             android:ellipsize="end"
-            android:maxLines="4" />
+            android:maxLines="4"
+            android:layout_gravity="bottom"/>
 
         <TextView
             android:id="@+id/article_subtitle"
@@ -47,6 +48,6 @@
             android:maxLines="1"
             android:singleLine="true"
             android:ellipsize="end" />
-    </LinearLayout>
+    </FrameLayout>
 
 </android.support.v7.widget.CardView>
