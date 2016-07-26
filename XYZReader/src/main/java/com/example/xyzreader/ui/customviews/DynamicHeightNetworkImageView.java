@@ -1,4 +1,4 @@
-package com.example.xyzreader.ui;
+package com.example.xyzreader.ui.customviews;
 
 import android.content.Context;
 import android.util.AttributeSet;
