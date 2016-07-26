@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.example.xyzreader.ui;
+package com.example.xyzreader.ui.customviews;
 
 import android.content.Context;
 import android.os.Parcelable;

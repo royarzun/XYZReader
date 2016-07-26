@@ -24,7 +24,7 @@
         </activity>
 
         <activity
-            android:name=".ui.ArticleDetailActivity"
+            android:name=".ui.detail.ArticleDetailActivity"
             android:parentActivityName=".ui.ArticleListActivity">
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />

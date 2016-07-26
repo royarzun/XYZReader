@@ -1,4 +1,4 @@
-package com.example.xyzreader.ui;
+package com.example.xyzreader.ui.detail;
 
 import android.app.Fragment;
 import android.app.LoaderManager;
@@ -27,6 +27,10 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
+import com.example.xyzreader.ui.ArticleListActivity;
+import com.example.xyzreader.ui.DrawInsetsFrameLayout;
+import com.example.xyzreader.ui.ImageLoaderHelper;
+import com.example.xyzreader.ui.customviews.ObservableScrollView;
 
 /**
  * A fragment representing a single Article detail screen. This fragment is
