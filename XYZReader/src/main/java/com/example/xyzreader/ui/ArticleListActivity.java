@@ -22,7 +22,7 @@ import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.data.ItemsContract;
 import com.example.xyzreader.data.UpdaterService;
-import com.example.xyzreader.ui.customviews.DynamicHeightNetworkImageView;
+import com.example.xyzreader.ui.custom.views.DynamicHeightNetworkImageView;
 import com.example.xyzreader.ui.detail.ArticleDetailActivity;
 
 /**

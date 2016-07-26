@@ -28,9 +28,9 @@ import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.ui.ArticleListActivity;
-import com.example.xyzreader.ui.DrawInsetsFrameLayout;
+import com.example.xyzreader.ui.custom.layouts.DrawInsetsFrameLayout;
 import com.example.xyzreader.ui.ImageLoaderHelper;
-import com.example.xyzreader.ui.customviews.ObservableScrollView;
+import com.example.xyzreader.ui.custom.views.ObservableScrollView;
 
 /**
  * A fragment representing a single Article detail screen. This fragment is
