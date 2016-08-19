@@ -17,7 +17,7 @@
 
 <resources>
 
-    <style name="Theme.Bacon" parent="Theme.AppCompat.Light.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/theme_primary</item>
         <item name="colorPrimaryDark">@color/theme_primary_dark</item>
         <item name="colorAccent">@color/theme_accent</item>
@@ -26,11 +26,11 @@
         <item name="windowActionBarOverlay">false</item>
     </style>
 
-    <style name="Theme.Bacon.Detail">
+    <style name="AppTheme.Detail">
         <item name="android:statusBarColor">@android:color/transparent</item>
     </style>
 
-    <style name="Theme.Bacon.Detail.Title">
+    <style name="AppTheme.Detail.Title">
         <item name="android:fontFamily">sans-serif-condensed</item>
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Large</item>
         <item name="android:textColor">#FFF</item>
@@ -39,12 +39,12 @@
         <item name="android:lineSpacingMultiplier">0.9</item>
     </style>
 
-    <style name="Theme.Bacon.Detail.SubTitle">
+    <style name="AppTheme.Detail.SubTitle">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Small</item>
         <item name="android:textColor">#8FFF</item>
     </style>
 
-    <style name="Theme.Bacon.Detail.Body">
+    <style name="AppTheme.Detail.Body">
         <item name="android:textAppearance">@style/TextAppearance.AppCompat.Medium</item>
         <item name="android:textSize">22sp</item>
     </style>
