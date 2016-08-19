@@ -58,21 +58,21 @@
 
                     <TextView
                         android:id="@+id/article_title"
-                        style="@style/Theme.Bacon.Detail.Title"
+                        style="@style/AppTheme.Detail.Title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"/>
 
                     <TextView
                         android:id="@+id/article_byline"
-                        style="@style/Theme.Bacon.Detail.SubTitle"
+                        style="@style/AppTheme.Detail.SubTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/article_body"
-                    style="@style/Theme.Bacon.Detail.Body"
+                    style="@style/AppTheme.Detail.Body"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
