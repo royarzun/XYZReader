@@ -23,7 +23,6 @@
         <item name="colorAccent">@color/theme_accent</item>
         <item name="android:textColor">@color/theme_article_text</item>
         <item name="android:subtitleTextStyle">@color/link_text_material_light</item>
-        <item name="windowActionBarOverlay">false</item>
     </style>
 
     <style name="AppTheme.Detail">
