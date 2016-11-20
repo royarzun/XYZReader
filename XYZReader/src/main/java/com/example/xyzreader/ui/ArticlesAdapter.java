@@ -1,8 +1,10 @@
 package com.example.xyzreader.ui;
 
+import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -40,8 +42,12 @@ public class ArticlesAdapter  extends RecyclerView.Adapter<ArticlesViewHolder> {
         view.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                ActivityOptionsCompat options = ActivityOptionsCompat.
+                        makeSceneTransitionAnimation((Activity) mContext, view, "itemTransition");
+
                 mContext.startActivity(new Intent(Intent.ACTION_VIEW,
-                        ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))));
+                        ItemsContract.Items.buildItemUri(getItemId(vh.getAdapterPosition()))),
+                        options.toBundle());
             }
         });
         return vh;
@@ -56,6 +62,7 @@ public class ArticlesAdapter  extends RecyclerView.Adapter<ArticlesViewHolder> {
                 mCursor.getString(ArticleLoader.Query.THUMB_URL),
                 ImageLoaderHelper.getInstance(mContext).getImageLoader());
         holder.thumbnailView.setAspectRatio(mCursor.getFloat(ArticleLoader.Query.ASPECT_RATIO));
+        holder.thumbnailView.setTransitionName("itemTransition");
     }
 
     @Override
