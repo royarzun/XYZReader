@@ -25,14 +25,12 @@
         <item name="android:subtitleTextStyle">@color/link_text_material_light</item>
         <item name="android:windowContentTransitions">true</item>
 
-        <item name="android:windowEnterTransition">@transition/activity_fade</item>
-        <item name="android:windowExitTransition">@transition/activity_fade</item>
+        <item name="android:windowEnterTransition">@transition/detail_enter</item>
+        <item name="android:windowExitTransition">@transition/detail_enter</item>
 
         <!-- specify shared element transitions -->
-        <item name="android:windowSharedElementEnterTransition">
-            @transition/activity_fade</item>
-        <item name="android:windowSharedElementExitTransition">
-            @transition/activity_fade</item>
+        <item name="android:windowSharedElementEnterTransition">@transition/detail_enter</item>
+        <item name="android:windowSharedElementExitTransition">@transition/detail_exit</item>
     </style>
 
     <style name="AppTheme.Detail">
