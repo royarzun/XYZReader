@@ -21,6 +21,7 @@
             android:id="@+id/thumbnail"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:transitionName="theSharedImageView"
             android:background="@color/photo_placeholder" />
 
         <TextView
