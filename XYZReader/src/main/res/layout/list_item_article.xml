@@ -11,16 +11,17 @@
     android:focusable="true"
     android:foreground="?selectableItemBackground">
 
-    <FrameLayout
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
         <!--suppress AndroidLintContentDescription -->
-        <com.example.xyzreader.ui.customviews.DynamicHeightNetworkImageView
+        <com.example.xyzreader.ui.custom.views.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
+            android:transitionName="theSharedImageView"
             android:background="@color/photo_placeholder" />
 
         <TextView
@@ -29,7 +30,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingLeft="16dp"
-            android:paddingTop="16dp"
+            android:paddingTop="4dp"
             android:paddingRight="16dp"
             android:paddingBottom="4dp"
             android:layout_gravity="bottom"/>
@@ -42,6 +43,6 @@
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
             android:paddingBottom="16dp" />
-    </FrameLayout>
+    </LinearLayout>
 
 </android.support.v7.widget.CardView>

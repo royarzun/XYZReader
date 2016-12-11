@@ -22,15 +22,16 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.os.Build;
 
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.ImageLoader;
 import com.example.xyzreader.R;
 import com.example.xyzreader.data.ArticleLoader;
 import com.example.xyzreader.ui.ArticleListActivity;
-import com.example.xyzreader.ui.DrawInsetsFrameLayout;
+import com.example.xyzreader.ui.custom.layouts.DrawInsetsFrameLayout;
 import com.example.xyzreader.ui.ImageLoaderHelper;
-import com.example.xyzreader.ui.customviews.ObservableScrollView;
+import com.example.xyzreader.ui.custom.views.ObservableScrollView;
 
 /**
  * A fragment representing a single Article detail screen. This fragment is
@@ -39,7 +40,7 @@ import com.example.xyzreader.ui.customviews.ObservableScrollView;
  */
 public class ArticleDetailFragment extends Fragment implements
         LoaderManager.LoaderCallbacks<Cursor> {
-    private static final String TAG = "ArticleDetailFragment";
+    private static final String TAG = ArticleDetailActivity.class.getSimpleName();
 
     public static final String ARG_ITEM_ID = "item_id";
     private static final float PARALLAX_FACTOR = 1.25f;
@@ -201,6 +202,7 @@ public class ArticleDetailFragment extends Fragment implements
                             + mCursor.getString(ArticleLoader.Query.AUTHOR)
                             + "</font>"));
             bodyView.setText(Html.fromHtml(mCursor.getString(ArticleLoader.Query.BODY)));
+
             ImageLoaderHelper.getInstance(getActivity()).getImageLoader()
                     .get(mCursor.getString(ArticleLoader.Query.PHOTO_URL), new ImageLoader.ImageListener() {
                         @Override
@@ -213,6 +215,9 @@ public class ArticleDetailFragment extends Fragment implements
                                 mRootView.findViewById(R.id.meta_bar)
                                         .setBackgroundColor(mMutedColor);
                                 updateStatusBar();
+                                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP)
+                                    getActivity().startPostponedEnterTransition();
+
                             }
                         }
 
@@ -250,7 +255,8 @@ public class ArticleDetailFragment extends Fragment implements
             mCursor = null;
         }
 
-        bindViews();
+    bindViews();
+
     }
 
     @Override

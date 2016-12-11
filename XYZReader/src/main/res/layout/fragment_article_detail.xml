@@ -1,11 +1,11 @@
-<com.example.xyzreader.ui.DrawInsetsFrameLayout
+<com.example.xyzreader.ui.custom.layouts.DrawInsetsFrameLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/draw_insets_frame_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <com.example.xyzreader.ui.customviews.ObservableScrollView
+    <com.example.xyzreader.ui.custom.views.ObservableScrollView
         android:id="@+id/scrollview"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -25,6 +25,7 @@
                     android:id="@+id/photo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:transitionName="theSharedImageView"
                     android:scaleType="centerCrop"/>
 
                 <View
@@ -34,7 +35,7 @@
 
             </FrameLayout>
 
-            <com.example.xyzreader.ui.MaxWidthLinearLayout
+            <com.example.xyzreader.ui.custom.layouts.MaxWidthLinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -58,21 +59,21 @@
 
                     <TextView
                         android:id="@+id/article_title"
-                        style="@style/Theme.Bacon.Detail.Title"
+                        style="@style/AppTheme.Detail.Title"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:paddingBottom="@dimen/detail_metabar_title_bottom_padding"/>
 
                     <TextView
                         android:id="@+id/article_byline"
-                        style="@style/Theme.Bacon.Detail.SubTitle"
+                        style="@style/AppTheme.Detail.SubTitle"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content" />
                 </LinearLayout>
 
                 <TextView
                     android:id="@+id/article_body"
-                    style="@style/Theme.Bacon.Detail.Body"
+                    style="@style/AppTheme.Detail.Body"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/detail_inner_horiz_margin"
@@ -80,9 +81,9 @@
                     android:paddingBottom="@dimen/detail_body_bottom_margin"
                     android:lineSpacingMultiplier="@fraction/detail_body_line_spacing_multiplier" />
 
-            </com.example.xyzreader.ui.MaxWidthLinearLayout>
+            </com.example.xyzreader.ui.custom.layouts.MaxWidthLinearLayout>
         </LinearLayout>
-    </com.example.xyzreader.ui.customviews.ObservableScrollView>
+    </com.example.xyzreader.ui.custom.views.ObservableScrollView>
 
     <ImageButton android:id="@+id/share_fab"
         android:stateListAnimator="@anim/fab_state_list_anim"
@@ -90,10 +91,10 @@
         android:layout_gravity="bottom|end"
         android:layout_marginRight="@dimen/fab_margin"
         android:layout_marginBottom="@dimen/fab_margin"
-        android:layout_width="56dp"
-        android:layout_height="56dp"
+        android:layout_width="@dimen/fab_size"
+        android:layout_height="@dimen/fab_size"
         android:src="@drawable/ic_share"
         android:elevation="@dimen/fab_elevation"
         android:contentDescription="@string/action_share" />
 
-</com.example.xyzreader.ui.DrawInsetsFrameLayout>
+</com.example.xyzreader.ui.custom.layouts.DrawInsetsFrameLayout>
