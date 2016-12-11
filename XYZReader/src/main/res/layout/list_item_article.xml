@@ -20,7 +20,7 @@
         <com.example.xyzreader.ui.custom.views.DynamicHeightNetworkImageView
             android:id="@+id/thumbnail"
             android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="0dp"
             android:transitionName="theSharedImageView"
             android:background="@color/photo_placeholder" />
 
